@@ -107,8 +107,8 @@ describe("<ScheduleComponent />", () => {
       const harryTeacherEl = screen.getByTestId("scheduleTeacherNameId_0");
       const dracoTeacherEl = screen.getByTestId("scheduleTeacherNameId_3");
 
-      expect(harryTeacherEl).toHaveTextContent("");
-      expect(dracoTeacherEl).toHaveTextContent("");
+      expect(harryTeacherEl).toHaveTextContent("Not Assigned");
+      expect(dracoTeacherEl).toHaveTextContent("Not Assigned");
     });
 
     unsubscribe();

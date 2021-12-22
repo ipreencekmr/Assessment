@@ -54,7 +54,7 @@ class Student {
       teacher = this.teacherForId(teacher.parentId);
     }
 
-    return teacher ? teacher.name : "";
+    return teacher ? teacher.name : "Not Assigned";
   }
 
   subjectName() {
