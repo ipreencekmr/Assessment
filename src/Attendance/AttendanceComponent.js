@@ -31,9 +31,10 @@ const AttendanceComponent = (props) => {
           {props.teachers.map((item, index) => {
             return (
               <tr key={index}>
-                <td>{item.name}</td>
+                <td data-testid={"techerNameId_" + index}>{item.name}</td>
                 <td>
                   <select
+                    data-testid={"attendanceMarkId_" + index}
                     value={item.present ? "0" : "1"}
                     className="form-select"
                     onChange={(e) => handleChange(e, item.id)}
