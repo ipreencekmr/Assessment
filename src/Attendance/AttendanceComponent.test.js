@@ -47,7 +47,12 @@ describe("<AttendanceComponent />", () => {
     expect(action).toMatchObject(expectedPayload);
   });
 
-  it("second row should contain correct teacher name", () => {
+  it("list should contain 8 elements", () => {
+    const attendanceList = screen.getByTestId("attendanceListId");
+    expect(attendanceList.childElementCount).toEqual(8);
+  });
+
+  it("second row should contain teacher name Minerva McGonagall", () => {
     const dataElement = screen.getByTestId("techerNameId_1");
     expect(dataElement).toHaveTextContent("Minerva McGonagall");
   });

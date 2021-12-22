@@ -27,7 +27,7 @@ const AttendanceComponent = (props) => {
             <th>Attendance</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody data-testid="attendanceListId">
           {props.teachers.map((item, index) => {
             return (
               <tr key={index}>

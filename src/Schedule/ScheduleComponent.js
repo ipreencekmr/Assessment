@@ -14,13 +14,17 @@ const ScheduleComponent = (props) => {
             <th>Teacher</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody data-testid={"scheduleListId"}>
           {props.students.map((item, index) => {
             return (
               <tr key={index}>
-                <td>{item.name}</td>
+                <td data-testid={"scheduleStudentNameId_" + index}>
+                  {item.name}
+                </td>
                 <td>{item.subjectName()}</td>
-                <td>{item.teacherName()}</td>
+                <td data-testid={"scheduleTeacherNameId_" + index}>
+                  {item.teacherName()}
+                </td>
               </tr>
             );
           })}

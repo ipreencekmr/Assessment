@@ -5,3 +5,19 @@
   margin: 15px;
   padding: 15px;
 }
+
+.separator {
+  background-color: darkgray;
+  height: 100%;
+  width: 1px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .separator {
+    background-color: darkgray;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
